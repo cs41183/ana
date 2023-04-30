@@ -1,0 +1,5 @@
+Ana e-commerce . Pershkrimi i aplikacionit 
+
+backend - pjesa e backendit 
+
+frontend - pjesa e reactjs frontend
