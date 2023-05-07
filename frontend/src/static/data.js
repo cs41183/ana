@@ -491,7 +491,7 @@ export const navItems = [
       image_Url: [
         {
           public_id: "test",
-          url: "https://scontent.fprn9-1.fna.fbcdn.net/v/t39.30808-6/343473841_1245676649377294_2795515375433198814_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=FPTzhov2rfgAX_hjurY&_nc_ht=scontent.fprn9-1.fna&oh=00_AfCltYwDhID8ZHbjVBsZuwTrPMMW_xzNQkgr0LHzzOHILQ&oe=6452E610",
+          url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
         },
         {
           public_id: "test",
@@ -530,7 +530,7 @@ export const navItems = [
       image_Url: [
         {
           public_id: "test",
-          url: "https://scontent.fprn9-1.fna.fbcdn.net/v/t39.30808-6/343740051_598671978870688_74257534123057329_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=P9wZqX9q7SYAX-UxFzD&_nc_ht=scontent.fprn9-1.fna&oh=00_AfADbyZVNJHHrlEUXDpJgHvnw0EOq_mv8NSoMFoms7sX7A&oe=6452C313",
+          url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
         },
         {
           public_id: "test",
@@ -559,7 +559,7 @@ export const navItems = [
       image_Url: [
         {
           public_id: "test",
-          url: "https://scontent.fprn9-1.fna.fbcdn.net/v/t39.30808-6/343483522_777133324038036_1868326677477832278_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=roE7KIcsfuYAX9S8bm7&_nc_ht=scontent.fprn9-1.fna&oh=00_AfBGhovJ4RYM_6As-IHDGlc18pUqDQmHtWF7wd4cFUqmLw&oe=6453291C",
+          url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
         },
         {
           public_id: "test",

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Routeri, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   LoginPage,
   SignupPage,
@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
       {loading ? null : (
-        <Routeri>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
@@ -53,7 +53,7 @@ const App = () => {
             pauseOnHover
             theme="dark"
           />
-        </Routeri>
+        </BrowserRouter>
       )}
     </>
   );
