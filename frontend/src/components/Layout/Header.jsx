@@ -52,10 +52,13 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
-              <img
+              <h1 className="text-2xl">
+              Ana Clothing 
+              </h1>
+              {/* <img
                 src="https://shopo.quomodothemes.website/assets/images/logo.svg"
                 alt=""
-              />
+              /> */}
             </Link>
           </div>
           {/* search box */}
@@ -107,7 +110,7 @@ const Header = ({ activeHeading }) => {
       <div
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden 800px:flex items-center justify-between w-full bg-[#3321c8] h-[70px]`}
+        } transition hidden 800px:flex items-center justify-between w-full bg-[#1E2022] h-[70px]`}
       >
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
