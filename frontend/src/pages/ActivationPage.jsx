@@ -24,7 +24,7 @@ const ActivationPage = () => {
       };
       sendRequest();
     }
-  }, [activation_token]);
+  }, []);
 
   return (
     <div
@@ -37,7 +37,7 @@ const ActivationPage = () => {
       }}
     >
       {error ? (
-        <p className="text-red-600 text-2xl">Your token is expired!</p>
+        <p>Your token is expired!</p>
       ) : (
         <p>Your account has been created suceessfully!</p>
       )}

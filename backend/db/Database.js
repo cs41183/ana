@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const colors = require("colors");
-
 const connectDatabase = () => {
   mongoose
     .connect(process.env.DB_URL, {
