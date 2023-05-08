@@ -6,10 +6,10 @@ const EventCard = ({active}) => {
   return (
     <div className={`w-full block bg-white rounded-lg ${active ? "unset" : "mb-12"} lg:flex p-2`}>
       <div className="w-full lg:-w[50%] m-auto">
-        <img src="https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg" alt="" />
+        <img src="https://www.vendhq.com/blog/wp-content/uploads/2019/01/Event-Ideas-Blog-2-644x349.jpg" alt="" />
       </div>
       <div className="w-full lg:[w-50%] flex flex-col justify-center">
-        <h2 className={`${styles.productTitle}`}>Iphone 14pro max 8/256gb</h2>
+        <h2 className={`${styles.productTitle}`}>The Wedding Exhibition at Braehead Arena	Glasgow, UK</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum
           molestias sequi, officiis iusto assumenda libero explicabo beatae amet

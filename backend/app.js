@@ -17,11 +17,11 @@ app.use("/", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
 // config
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({
-    path: "backend/config/.env",
-  });
-}
+// if (process.env.NODE_ENV !== "PRODUCTION") {
+//   require("dotenv").config({
+//     path: "backend/config/.env",
+//   });
+// }
 
 // import routes
 const user = require("./controller/user");
