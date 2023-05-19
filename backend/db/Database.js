@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const colors = require("colors");
+
 const connectDatabase = () => {
   mongoose
     .connect(process.env.DB_URL, {
@@ -7,7 +8,7 @@ const connectDatabase = () => {
       useUnifiedTopology: true,
     })
     .then((data) => {
-      console.log(`mongod connected with server: ${data.connection.host}`.bgBlue.white);
+      console.log(`Lidhja mongoDb-server eshte kryer me sukses: ${data.connection.host}`.bgMagenta.white);
     });
 };
 

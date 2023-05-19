@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 
 const Singup = () => {
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
@@ -27,6 +28,7 @@ const Singup = () => {
 
     newForm.append("file", avatar);
     newForm.append("name", name);
+    newForm.append("username", username);
     newForm.append("email", email);
     newForm.append("password", password);
 
@@ -35,6 +37,7 @@ const Singup = () => {
       .then((res) => {
         toast.success(res.data.message);
         setName("");
+        setUsername("");
         setEmail("");
         setPassword("");
         setAvatar();
@@ -89,6 +92,26 @@ const Singup = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Username
+              </label>
+              <div className="mt-1">
+                <input
+                  type="text"
+                  name="username"
+                  autoComplete="username"
+                  required
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>

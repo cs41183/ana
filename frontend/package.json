@@ -1,46 +1,44 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.3",
-    "@mui/styled-engine-sc": "^5.12.0",
-    "@mui/x-data-grid": "^6.3.1",
-    "@reduxjs/toolkit": "^1.9.5",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.4.0",
-    "country-state-city": "^3.1.4",
-    "js-cookie": "^3.0.5",
-    "lottie-react": "^2.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "react-redux": "^8.0.5",
-    "react-router-dom": "^6.11.1",
-    "react-scripts": "^5.0.1",
-    "react-toastify": "^9.1.2",
-    "redux": "^4.2.1",
-    "redux-thunk": "^2.4.2",
-    "redux-toolkit": "^1.1.2",
-    "styled-components": "^5.3.10",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "ana-frontend",
+  "version": "1.0.0",
+  "description": "react-frontend",
+  "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "author": "csdevs",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
+    "@paypal/react-paypal-js": "^7.8.3",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@stripe/react-stripe-js": "^2.1.0",
+    "@stripe/stripe-js": "^1.53.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "axios": "^1.4.0",
+    "country-state-city": "^3.1.4",
+    "js-cookie": "^3.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-lottie": "^1.2.3",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.1.3",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "redux-toolkit": "^1.1.2",
+    "socket.io-client": "^4.6.1",
+    "timeago": "^1.6.7",
+    "timeago.js": "^4.0.0-beta.3",
+    "web-vitals": "^3.3.1"
   },
   "browserslist": {
     "production": [
@@ -55,8 +53,8 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
   }
 }

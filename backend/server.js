@@ -1,6 +1,5 @@
 const app = require("./app");
 const connectDatabase = require("./db/Database");
-
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
@@ -10,7 +9,7 @@ process.on("uncaughtException", (err) => {
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
-    path: "backend/config/.env",
+    path: "config/.env",
   });
 }
 
@@ -20,7 +19,7 @@ connectDatabase();
 // create server
 const server = app.listen(process.env.PORT, () => {
   console.log(
-    `Server is running on http://localhost:${process.env.PORT}`
+    `Serveri eshte duke funksionuar ne portin http://localhost:${process.env.PORT}`.bgBlue.white
   );
 });
 
