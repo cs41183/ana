@@ -58,7 +58,7 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
-              <h1 className="font-semibold font-Rowdies italic text-3xl">Ana e-Buy</h1>
+              <h1 className="font-semibold font-Rowdies italic text-3xl">Ana <span className="text-[#3bc177]">e-Buy</span></h1>
             </Link>
           </div>
           {/* search box */}

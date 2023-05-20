@@ -13,3 +13,6 @@ const storage = multer.diskStorage({
 });
 
 exports.upload = multer({storage: storage});
+
+
+// multer package perdoret per me i ruajt filet e uploaduara lokalisht ne serverin tone.
