@@ -7,7 +7,7 @@ export const loadUser = () => async (dispatch) => {
     dispatch({
       type: "LoadUserRequest",
     });
-    const { data } = await axios.get(`${server}/user/getuser`, {
+    const { data } = await axios.get(`${server}/user/getuser`, { //per me i marr te dhenat e userit qe osht i kycur me na i qit te profile content
       withCredentials: true,
     });
     dispatch({
@@ -45,7 +45,7 @@ export const loadSeller = () => async (dispatch) => {
 
 // user update information
 export const updateUserInformation =
-  (name,username, email, phoneNumber, password) => async (dispatch) => {
+  (name,email, phoneNumber, password) => async (dispatch) => {
     try {
       dispatch({
         type: "updateUserInfoRequest",
@@ -54,7 +54,6 @@ export const updateUserInformation =
       const { data } = await axios.put(
         `${server}/user/update-user-info`,
         { 
-          username,
           email,
           password,
           phoneNumber,

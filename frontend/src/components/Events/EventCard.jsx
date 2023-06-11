@@ -27,7 +27,7 @@ const EventCard = ({ active, data }) => {
   }
   return (
     <div
-      className={`w-full block bg-white rounded-lg ${
+      className={`w-full block bg-white rounded-lg mb-4 ${
         active ? "unset" : "mb-12"
       } lg:flex p-2`}
     >

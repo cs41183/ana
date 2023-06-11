@@ -94,7 +94,7 @@ router.delete(
   })
 );
 
-// get all products
+// get all products 
 router.get(
   "/get-all-products",
   catchAsyncErrors(async (req, res, next) => {

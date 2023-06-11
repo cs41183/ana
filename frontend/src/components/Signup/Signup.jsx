@@ -6,6 +6,8 @@ import { RxAvatar } from "react-icons/rx";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
+// import {GoogleLogin } from '@react-oauth/google';
+// import jwt_decode from "jwt-decode";
 
 const Singup = () => {
   const [email, setEmail] = useState("");
@@ -22,6 +24,13 @@ const Singup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate password length
+    if (password.length > 8) {
+      toast.error("Password must be a maximum of 8 characters.");
+      return;
+    }
+
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
     const newForm = new FormData();
@@ -192,6 +201,7 @@ const Singup = () => {
                 Submit
               </button>
             </div>
+            
             <div className={`${styles.noramlFlex} w-full`}>
               <h4>Already have an account?</h4>
               <Link to="/login" className="text-blue-600 pl-2">

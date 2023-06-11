@@ -18,10 +18,10 @@ const coupounCodeSchema = new mongoose.Schema({
     },
     shopId:{
      type: String,
-     required: true,
+     required: true, //cili dyqan e ka qit
     },
     selectedProduct:{
-     type: String,
+     type: String, // per cilin produkt eshte ajo zbritje
     },
     createdAt:{
         type: Date,

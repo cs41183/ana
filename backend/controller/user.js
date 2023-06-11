@@ -11,13 +11,14 @@ const sendMail = require("../utils/sendMail");
 const sendToken = require("../utils/jwtToken");
 const { isAuthenticated, isAdmin } = require("../middleware/auth");
 
-
 /* te route /create-user   ----- ketu i marrim t dhanat e userit qe don mu regjistru e shikojm 
 se a ekziston ne db, nese jo ateher i thot krijoje nje token me qito te dhena email,username,password,file 
 edhe dergoja ne qat email ne gmail, nese e aktivizon pra e nenshkrun tokenin useri ateher shkon te route /activation 
 ku ruhen perfundimisht ne mongoDb , domethene regjistrohet me sukses ne web aplikacionin tone
 */
 router.post("/create-user", upload.single("file"), async (req, res, next) => {
+
+ //normal signup
   try {
     const { name, username, email, password } = req.body;
     const userEmail = await User.findOne({ email });
@@ -68,6 +69,8 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
   }
 });
 
+
+
 // create activation token ------  ketu e kemi kriju metoden createActivationToken e cila i dergohet perdoruesit ne email per ta nenshkru
 const createActivationToken = (user) => {
   return jwt.sign(user, process.env.ACTIVATION_SECRET, {
@@ -75,10 +78,12 @@ const createActivationToken = (user) => {
   });
 };
 
+
 // activate user ----- ky route e regjistron userin ne mongoDb nese e kemi kliku(sign) linkun qe na ka ardh ne email
 router.post(
   "/activation",
   catchAsyncErrors(async (req, res, next) => {
+
     try {
       const { activation_token } = req.body;
 

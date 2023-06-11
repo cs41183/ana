@@ -1,3 +1,11 @@
+/*App.js eshte pikenisja kryesore dhe komponenta ne nivelin me te larte te nje React Aplikacioni, pra App.js eshte komponenta kryesore ne te cilen brenda saj i renderojme te gjitha komponentat e tjera,
+sic po shihet ne kodin me posht ketu i importojm stylin e css, react hooks si useEffect,useState, react-router-domin i cili sherben per me na mundesu me kalu prej komponentes ne komponent(faqes ne faqe) , 
+i kemi importu routes per user,per admin,per seller,
+pra me nje fjale i importojm dependencies qe na duhen ne kete react applikacion,
+dhe permes browser routerit me poshte e shohim se si jau caktojm routave te cila page me na dergu, emrin e pathit etj.
+
+*/
+
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -318,8 +326,8 @@ const App = () => {
         />
       </Routes>
       <ToastContainer
-        position="top-center"
-        autoClose={10000}
+        position="bottom-center"
+        autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

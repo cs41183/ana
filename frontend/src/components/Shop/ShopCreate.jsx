@@ -20,6 +20,13 @@ const ShopCreate = () => {
      
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate password length
+    if (password.length > 8) {
+      toast.error("Password must be a maximum of 8 characters.");
+      return;
+    }
+    
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
     const newForm = new FormData();

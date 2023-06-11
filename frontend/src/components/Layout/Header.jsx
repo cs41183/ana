@@ -214,11 +214,7 @@ const Header = ({ activeHeading }) => {
           </div>
           <div>
             <Link to="/">
-              <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-                alt=""
-                className="mt-3 cursor-pointer"
-              />
+            <h1 className="font-semibold font-Rowdies italic text-3xl">Ana <span className="text-[#3bc177]">e-Buy</span></h1>
             </Link>
           </div>
           <div>

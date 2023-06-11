@@ -87,14 +87,14 @@ const ProductDetails = ({ data }) => {
 
   const avg =  totalRatings / totalReviewsLength || 0;
 
-  const averageRating = avg.toFixed(2);
+  const averageRating = avg.toFixed(5);
 
 
   const handleMessageSubmit = async () => {
     if (isAuthenticated) {
-      const groupTitle = data._id + user._id;
-      const userId = user._id;
-      const sellerId = data.shop._id;
+      const groupTitle = data._id + user._id; //id e te dhenave dhe id e userit qe i ka shkru ato te dhena
+      const userId = user._id; // id e userit
+      const sellerId = data.shop._id; // id e sellerit te cili seller ke me qu at mesazh
       await axios
         .post(`${server}/conversation/create-new-conversation`, {
           groupTitle,
@@ -256,6 +256,7 @@ const ProductDetailsInfo = ({
   averageRating,
 }) => {
   const [active, setActive] = useState(1);
+  
 
   return (
     <div className="bg-[#f5f6fb] px-3 800px:px-10 py-2 rounded">

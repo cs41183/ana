@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
+import { useGoogleLogin } from '@react-oauth/google';
+import jwt_decode from "jwt-decode";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,6 +36,11 @@ const Login = () => {
       });
   };
 
+  const { signIn, loaded } = useGoogleLogin({
+    clientId: '1078643768856-i3b0kmdn444jbag7fas9obnh5foblnik.apps.googleusercontent.com',
+    redirectUri: 'http://localhost:3000',
+  });
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -44,25 +51,7 @@ const Login = () => {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {/* <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email address
-              </label>
-              <div className="mt-1">
-                <input
-                  type="email"
-                  name="email"
-                  autoComplete="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                />
-              </div>
-            </div> */}
+
             <div>
               <label
                 htmlFor="usernameOrEmail"
@@ -82,6 +71,7 @@ const Login = () => {
                 />
               </div>
             </div>
+
             <div>
               <label
                 htmlFor="password"
@@ -114,6 +104,7 @@ const Login = () => {
                 )}
               </div>
             </div>
+
             <div className={`${styles.noramlFlex} justify-between`}>
               <div className={`${styles.noramlFlex}`}>
                 <input
@@ -138,6 +129,7 @@ const Login = () => {
                 </a>
               </div>
             </div>
+
             <div>
               <button
                 type="submit"
@@ -146,6 +138,8 @@ const Login = () => {
                 Submit
               </button>
             </div>
+            
+            
             <div className={`${styles.noramlFlex} w-full`}>
               <h4>Not have any account?</h4>
               <Link to="/sign-up" className="text-blue-600 pl-2">

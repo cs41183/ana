@@ -8,7 +8,7 @@ const connectDatabase = () => {
       useUnifiedTopology: true,
     })
     .then((data) => {
-      console.log(`Lidhja mongoDb-server eshte kryer me sukses: ${data.connection.host}`.bgMagenta.white);
+      console.log(`Lidhja mongoDb-server eshte kryer me sukses: ${data.connection.host}`.green.bold);
     });
 };
 

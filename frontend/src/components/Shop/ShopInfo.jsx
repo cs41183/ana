@@ -17,7 +17,7 @@ const ShopInfo = ({ isOwner }) => {
   useEffect(() => {
     dispatch(getAllProductsShop(id));
     setIsLoading(true);
-    axios.get(`${server}/shop/get-shop-info/${id}`).then((res) => {
+    axios.get(`${server}/shop/get-shop-info/${id}`).then((res) => { //me axios po i thojm shko ne server te controllers/shop.js tek get-shop-info
      setData(res.data.shop);
      setIsLoading(false);
     }).catch((error) => {

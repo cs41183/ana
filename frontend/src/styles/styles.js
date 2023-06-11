@@ -1,3 +1,5 @@
+//ketu i kemi deklaru disa klasa te gatshme, qysh na duhen neve per stilizim
+
 const styles = {
     custom_container: "w-11/12 hidden sm:block",
     heading: 'text-[27px] text-center md:text-start font-[600] font-Roboto pb-[20px]',
