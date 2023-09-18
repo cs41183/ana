@@ -12,6 +12,9 @@ const CreateProduct = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+
+  const [descriptionError, setDescriptionError] = useState("");
+
   const [images, setImages] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -43,6 +46,15 @@ const CreateProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate description length
+    if (description.length > 500) {
+      setDescriptionError("Description must be maximum 500 characters.");
+    return;
+  }
+
+   // Clear description error if it was previously set
+  setDescriptionError("");
 
     const newForm = new FormData();
 
@@ -95,6 +107,7 @@ const CreateProduct = () => {
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Enter your product description..."
           ></textarea>
+          {descriptionError && <p className="text-red-500">{descriptionError}</p>}
         </div>
         <br />
         <div>

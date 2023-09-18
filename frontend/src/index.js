@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux"; // e importojm Providerin prej reactit
 import Store from "./redux/store"; // e importojm storen prej folderit redux
 import { GoogleOAuthProvider } from '@react-oauth/google'; // importojme google auth providerin
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 // komponenten kryesore App.js e mbeshtjellim me Provider store , per me pas qasje ne store ne te gjithe aplikacionin
 // ketu ReactDOMi e renderon pamjen e React Aplikacionit ne html fajllin qe gjendet te public/index.html

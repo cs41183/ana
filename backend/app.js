@@ -54,6 +54,14 @@ app.use("/api/v2/coupon", coupon);
 app.use("/api/v2/payment", payment);
 app.use("/api/v2/withdraw", withdraw);
 
+
+// routat e crudit
+const articleRoutes = require('./crudroutes/articleRoutes');
+const categoryRoutes = require('./crudroutes/categoryRoutes');
+
+app.use('/articles', articleRoutes);
+app.use('/categories', categoryRoutes);
+
 // it's for ErrorHandling
 app.use(ErrorHandler);
 

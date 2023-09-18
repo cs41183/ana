@@ -9,6 +9,10 @@ dhe permes browser routerit me poshte e shohim se si jau caktojm routave te cila
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ArticleForm from './components/crudcomponents/ArticleForm';
+import CategoryForm from './components/crudcomponents/CategoryForm';
+import ArticleList from './components/crudcomponents/ArticleList';
+import CategoryList from './components/crudcomponents/CategoryList';
 import {
   LoginPage,
   SignupPage,
@@ -101,6 +105,14 @@ const App = () => {
         </Elements>
       )}
       <Routes>
+          {/* Routat e crudit */}
+          <Route path="/articles" element={<ArticleList/>} />
+          <Route path="/articles/add" element={<ArticleForm/>} />
+          <Route path="/categories"  element={<CategoryList/>} />
+          <Route path="/categories/add" element={<CategoryForm/>} />
+
+
+
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignupPage />} />
